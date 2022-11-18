@@ -34,11 +34,21 @@ Stampare dentro uno span il risultato.
 
 @{
     string text = "nel mezzo del cammin di nostra vita";
-    int count = text.Count(d => d == 'a');
+    int SearchChar (char a) {
+        int count = 0;
+        //int count = text.Count(d => d == 'a');
+        for (int i = 0; i < text.Length; i++) {
+            char current = text[i];
+            if (current == a) {
+                count++;
+            }
+        }
+        return count;
+    }
 
 }
 
-<div>@count</div>
+<div>@SearchChar('a')</div>
 
 @*4. Creare una List<int> di 20 numeri interi (generati random da 1 a 90, 1 e 90 inclusi) e mostrare in pagina solo i numeri compresi tra 20 e 70*@
 
