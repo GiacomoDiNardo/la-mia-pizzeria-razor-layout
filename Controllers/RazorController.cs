@@ -4,7 +4,7 @@ namespace la_mia_pizzeria_static.Controllers
 {
     public class RazorController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Snacks()
         {
             return View();
         }
